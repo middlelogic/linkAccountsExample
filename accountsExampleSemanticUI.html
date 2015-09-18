@@ -1,9 +1,31 @@
 <head>
-  <title>accountsExampleSemanticUI</title>
+  <title>linkAccountsExample</title>
 </head>
 
 <body>
-  <h1>Welcome to accountsExampleSemanticUI!</h1>
+  <div>
+    <h1>Welcome to linkAccountsExample!</h1>
 
-  {{> loginButtons}}
+    {{> loginButtons}}
+  </div>
+
+  <div>
+    {{> linkTemplate}}
+  </div>
 </body>
+
+<template name="linkTemplate">
+  <h2>2.  Link Accounts</h2>
+
+  <button class="link-github">Github</button>
+  <button class="link-facebook">Facebook</button>
+
+  <h2>3.  Associated with current user...</h2>
+
+ <ul>
+ {{#each services}}
+   <li>{{this}}</li>
+ {{/each}}
+ </ul>
+
+</template>
